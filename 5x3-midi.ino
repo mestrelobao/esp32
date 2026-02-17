@@ -77,31 +77,52 @@ if (kpd.key[i].kchar == '5') {
             playMIDINote(1, 55, 127);//Eb3
         }
 if (kpd.key[i].kchar == '6') {
-            Serial.println("number 6 pressed");
+            allsoundoff(1, 120, 0);
+            playMIDINote(1, 43, 127);//G2
         }
 if (kpd.key[i].kchar == '7') {
-            Serial.println("number 7 pressed");
+            allsoundoff(1, 120, 0);//GM
+            playMIDINote(1, 50, 127);//D3
+            playMIDINote(1, 55, 127);//G3
+            playMIDINote(1, 59, 127);//B3
         }
 if (kpd.key[i].kchar == '8') {
-            Serial.println("number 8 pressed");
+            allsoundoff(1, 120, 0);//Gm
+            playMIDINote(1, 50, 127);//D3
+            playMIDINote(1, 55, 127);//G3
+            playMIDINote(1, 58, 127);//Bb3
         }
 if (kpd.key[i].kchar == '9') {
-            Serial.println("number 9 pressed");
+            allsoundoff(1, 120, 0);
+            playMIDINote(1, 38, 127);//D2
         }
 if (kpd.key[i].kchar == 'a') {
-            Serial.println("number a pressed");
+            allsoundoff(1, 120, 0);//DM
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 62, 127);//D4
+            playMIDINote(1, 66, 127);//F#4
         }
 if (kpd.key[i].kchar == 'b') {
-            Serial.println("number b pressed");
+            allsoundoff(1, 120, 0);//Dm
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 62, 127);//D4
+            playMIDINote(1, 65, 127);//F4
         }
 if (kpd.key[i].kchar == 'c') {
-            Serial.println("number c pressed");
+            allsoundoff(1, 120, 0);
+            playMIDINote(1, 45, 127);//A2
         }
 if (kpd.key[i].kchar == 'd') {
-            Serial.println("number d pressed");
+            allsoundoff(1, 120, 0);//AM
+            playMIDINote(1, 52, 127);//E3
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 61, 127);//C#4
         }
 if (kpd.key[i].kchar == 'e') {
-            Serial.println("number e pressed");
+            allsoundoff(1, 120, 0);//Am
+            playMIDINote(1, 52, 127);//E3
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 60, 127);//C4
         }
                       break;
                     case RELEASED:
@@ -111,9 +132,9 @@ allsoundoff(1, 120, 0);
         }
     }
 }  // End loop
+
 void playMIDINote(byte channel, byte note, byte velocity) {
 byte noteOnStatus=0x90 + (channel-1);  
-
     Serial.write(noteOnStatus);
     Serial.write(note);
     Serial.write(velocity);

@@ -90,9 +90,6 @@ if (kpd.key[i].kchar == 'e') {
             Serial.println("number e pressed");
         }
                       break;
-      //              case HOLD:
-      //              msg = " HOLD.";
-      //          break;
                     case RELEASED:
 if (kpd.key[i].kchar == '0') {
             Serial.println("number 0 released");

@@ -60,7 +60,7 @@ void loop() {
                 switch (kpd.key[i].kstate) {  // Report active key state : IDLE, PRESSED, HOLD, or RELEASED
                     case PRESSED:
                   if (kpd.key[i].kchar == '0') {
-            playMIDINote(1, 41, 127);//F2
+            playMIDINote(2, 41, 127);//F2
         }
         if (kpd.key[i].kchar == '1') {
             playMIDINote(1, 48, 127);//C3
@@ -73,20 +73,20 @@ void loop() {
             playMIDINote(1, 56, 127);//Ab3
         }
                 if (kpd.key[i].kchar == '3') {
-            playMIDINote(1, 48, 127);//C2
+            playMIDINote(2, 36, 127);//C2
         }
                 if (kpd.key[i].kchar == '4') {
-            playMIDINote(1, 55, 127);//G2
-            playMIDINote(1, 60, 127);//C3
-            playMIDINote(1, 64, 127);//E3
+            playMIDINote(1, 43, 127);//G2
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 52, 127);//E3
         }
                 if (kpd.key[i].kchar == '5') {
-            playMIDINote(1, 55, 127);//G2
-            playMIDINote(1, 60, 127);//C3
-            playMIDINote(1, 63, 127);//Eb3
+            playMIDINote(1, 43, 127);//G2
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 51, 127);//Eb3
         }
                 if (kpd.key[i].kchar == '6') {
-            playMIDINote(1, 43, 127);//G2
+            playMIDINote(2, 43, 127);//G2
         }
                 if (kpd.key[i].kchar == '7') {
             playMIDINote(1, 50, 127);//D3
@@ -99,20 +99,20 @@ void loop() {
             playMIDINote(1, 58, 127);//Bb3
         }
                 if (kpd.key[i].kchar == '9') {
-            playMIDINote(1, 50, 127);//D2
+            playMIDINote(2, 38, 127);//D2
         }
                 if (kpd.key[i].kchar == 'a') {
-            playMIDINote(1, 57, 127);//A3
-            playMIDINote(1, 62, 127);//D4
-            playMIDINote(1, 66, 127);//F#4
+            playMIDINote(1, 45, 127);//A3
+            playMIDINote(1, 50, 127);//D4
+            playMIDINote(1, 54, 127);//F#4
         }
                 if (kpd.key[i].kchar == 'b') {
-            playMIDINote(1, 57, 127);//A3
-            playMIDINote(1, 62, 127);//D4
-            playMIDINote(1, 65, 127);//F4
+            playMIDINote(1, 45, 127);//A3
+            playMIDINote(1, 50, 127);//D4
+            playMIDINote(1, 53, 127);//F4
         }
                 if (kpd.key[i].kchar == 'c') {
-            playMIDINote(1, 45, 127);//A2
+            playMIDINote(2, 45, 127);//A2
         }
                 if (kpd.key[i].kchar == 'd') {
             playMIDINote(1, 52, 127);//E3
@@ -130,7 +130,7 @@ void loop() {
                 break;
                     case RELEASED:
 if (kpd.key[i].kchar == '0') {
-          playMIDINote(1, 41, 0);//F2
+          playMIDINote(2, 41, 0);//F2
         }
         if (kpd.key[i].kchar == '1') {
             playMIDINote(1, 48, 0);//C3
@@ -143,7 +143,7 @@ if (kpd.key[i].kchar == '0') {
             playMIDINote(1, 56, 0);//Ab3
         }
 if (kpd.key[i].kchar == '3') {
-            playMIDINote(1, 36, 0);//C2
+            playMIDINote(2, 36, 0);//C2
         }
 if (kpd.key[i].kchar == '4') {
             playMIDINote(1, 55, 0);//G2
@@ -156,7 +156,7 @@ if (kpd.key[i].kchar == '5') {
             playMIDINote(1, 63, 0);//Eb3
         }
 if (kpd.key[i].kchar == '6') {
-            playMIDINote(1, 43, 0);//G2
+            playMIDINote(2, 43, 0);//G2
         }
 if (kpd.key[i].kchar == '7') {
             playMIDINote(1, 50, 0);//D3
@@ -169,7 +169,7 @@ if (kpd.key[i].kchar == '8') {
             playMIDINote(1, 58, 0);//Bb3
         }
 if (kpd.key[i].kchar == '9') {
-            playMIDINote(1, 38, 0);//D2
+            playMIDINote(2, 38, 0);//D2
         }
 if (kpd.key[i].kchar == 'a') {
             playMIDINote(1, 57, 0);//A3
@@ -182,7 +182,7 @@ if (kpd.key[i].kchar == 'b') {
             playMIDINote(1, 65, 0);//F4
         }
 if (kpd.key[i].kchar == 'c') {
-            playMIDINote(1, 45, 0);//A2
+            playMIDINote(2, 45, 0);//A2
         }
 if (kpd.key[i].kchar == 'd') {
             playMIDINote(1, 52, 0);//E3

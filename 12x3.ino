@@ -27,7 +27,7 @@ String msg;
 
 
 void setup() {
-    Serial.begin(9600);
+    Serial.begin(31250);
     loopCount = 0;
     startTime = millis();
     msg = "";
@@ -37,8 +37,6 @@ void setup() {
 void loop() {
     loopCount++;
     if ( (millis()-startTime)>5000 ) {
-        Serial.print("Average loops per second = ");
-        Serial.println(loopCount/5);
         startTime = millis();
         loopCount = 0;
     }
@@ -52,113 +50,162 @@ void loop() {
                 switch (kpd.key[i].kstate) {  // Report active key state : IDLE, PRESSED, HOLD, or RELEASED
                     case PRESSED:
 if (kpd.key[i].kchar == '0') {
-            Serial.println("number 0 pressed");
+            playMIDINote(2, 37, 127);//C#2
         }
 if (kpd.key[i].kchar == '1') {
-            Serial.println("number 1 pressed");
+            playMIDINote(1, 44, 127);//G2
+            playMIDINote(1, 49, 127);//C3
+            playMIDINote(1, 53, 127);//E3
         }
 if (kpd.key[i].kchar == '2') {
-            Serial.println("number 2 pressed");
+            playMIDINote(1, 44, 127);//G2
+            playMIDINote(1, 49, 127);//C3
+            playMIDINote(1, 52, 127);//Eb3
         }
 if (kpd.key[i].kchar == '3') {
-            Serial.println("number 3 pressed");
+            playMIDINote(2, 44, 127);//G#2
         }
 if (kpd.key[i].kchar == '4') {
-            Serial.println("number 4 pressed");
+            playMIDINote(1, 51, 127);//D3
+            playMIDINote(1, 56, 127);//G3
+            playMIDINote(1, 60, 127);//B3
         }
 if (kpd.key[i].kchar == '5') {
-            Serial.println("number 5 pressed");
+            playMIDINote(1, 51, 127);//D3
+            playMIDINote(1, 56, 127);//G3
+            playMIDINote(1, 59, 127);//Bb3
         }
 if (kpd.key[i].kchar == '6') {
-            Serial.println("number 6 pressed");
+            playMIDINote(2, 39, 127);//D#2
         }
 if (kpd.key[i].kchar == '7') {
-            Serial.println("number 7 pressed");
+            playMIDINote(1, 46, 127);//A3
+            playMIDINote(1, 51, 127);//D4
+            playMIDINote(1, 55, 127);//F#4
         }
 if (kpd.key[i].kchar == '8') {
-            Serial.println("number 8 pressed");
+            playMIDINote(1, 46, 127);//A3
+            playMIDINote(1, 51, 127);//D4
+            playMIDINote(1, 54, 127);//F4
         }
 if (kpd.key[i].kchar == '9') {
-            Serial.println("number 9 pressed");
+            playMIDINote(2, 46, 127);//A#2
         }
 if (kpd.key[i].kchar == 'a') {
-            Serial.println("number a pressed");
+            playMIDINote(1, 53, 127);//E3
+            playMIDINote(1, 58, 127);//A3
+            playMIDINote(1, 62, 127);//C#4
         }
 if (kpd.key[i].kchar == 'b') {
-            Serial.println("number b pressed");
+            playMIDINote(1, 53, 127);//E3
+            playMIDINote(1, 58, 127);//A3
+            playMIDINote(1, 61, 127);//C4
         }
 if (kpd.key[i].kchar == 'c') {
-            Serial.println("number c pressed");
+            playMIDINote(2, 41, 127);//F2
         }
 if (kpd.key[i].kchar == 'd') {
-            Serial.println("number d pressed");
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 53, 127);//F3
+            playMIDINote(1, 57, 127);//A3
         }
 if (kpd.key[i].kchar == 'e') {
-            Serial.println("number e pressed");
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 53, 127);//F3
+            playMIDINote(1, 56, 127);//Ab3
         }
 if (kpd.key[i].kchar == 'f') {
-            Serial.println("number f pressed");
+            playMIDINote(2, 36, 127);//C2
         }
 if (kpd.key[i].kchar == 'g') {
-            Serial.println("number g pressed");
+            playMIDINote(1, 43, 127);//G2
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 52, 127);//E3
         }
 if (kpd.key[i].kchar == 'h') {
-            Serial.println("number h pressed");
+            playMIDINote(1, 43, 127);//G2
+            playMIDINote(1, 48, 127);//C3
+            playMIDINote(1, 51, 127);//Eb3
         }
 if (kpd.key[i].kchar == 'i') {
-            Serial.println("number i pressed");
+            playMIDINote(2, 43, 127);//G2
         }
 if (kpd.key[i].kchar == 'j') {
-            Serial.println("number j pressed");
+            playMIDINote(1, 50, 127);//D3
+            playMIDINote(1, 55, 127);//G3
+            playMIDINote(1, 59, 127);//B3
         }
 if (kpd.key[i].kchar == 'k') {
-            Serial.println("number k pressed");
+            playMIDINote(1, 50, 127);//D3
+            playMIDINote(1, 55, 127);//G3
+            playMIDINote(1, 58, 127);//Bb3
         }
 if (kpd.key[i].kchar == 'l') {
-            Serial.println("number l pressed");
+            playMIDINote(2, 38, 127);//D2
         }
 if (kpd.key[i].kchar == 'm') {
-            Serial.println("number m pressed");
+            playMIDINote(1, 45, 127);//A3
+            playMIDINote(1, 50, 127);//D4
+            playMIDINote(1, 54, 127);//F#4
         }
 if (kpd.key[i].kchar == 'n') {
-            Serial.println("number n pressed");
+            playMIDINote(1, 45, 127);//A3
+            playMIDINote(1, 50, 127);//D4
+            playMIDINote(1, 53, 127);//F4
         }
 if (kpd.key[i].kchar == 'o') {
-            Serial.println("number o pressed");
+            playMIDINote(2, 45, 127);//A2
         }
 if (kpd.key[i].kchar == 'p') {
-            Serial.println("number p pressed");
+            playMIDINote(1, 52, 127);//E3
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 61, 127);//C#4
         }
 if (kpd.key[i].kchar == 'q') {
-            Serial.println("number q pressed");
+            playMIDINote(1, 52, 127);//E3
+            playMIDINote(1, 57, 127);//A3
+            playMIDINote(1, 60, 127);//C4
         }
 if (kpd.key[i].kchar == 'r') {
-            Serial.println("number r pressed");
+            playMIDINote(2, 40, 127);//E2
         }
 if (kpd.key[i].kchar == 's') {
-            Serial.println("number s pressed");
+            playMIDINote(1, 47, 127);//C3
+            playMIDINote(1, 52, 127);//F3
+            playMIDINote(1, 56, 127);//A3
         }
 if (kpd.key[i].kchar == 't') {
-            Serial.println("number t pressed");
+            playMIDINote(1, 47, 127);//C3
+            playMIDINote(1, 52, 127);//F3
+            playMIDINote(1, 55, 127);//Ab3
         }
 if (kpd.key[i].kchar == 'u') {
-            Serial.println("number u pressed");
+            playMIDINote(2, 47, 127);//B3
         }
 if (kpd.key[i].kchar == 'v') {
-            Serial.println("number v pressed");
+            playMIDINote(1, 54, 127);//G2
+            playMIDINote(1, 59, 127);//C3
+            playMIDINote(1, 63, 127);//E3
         }
 if (kpd.key[i].kchar == 'w') {
-            Serial.println("number w pressed");
+            playMIDINote(1, 54, 127);//G2
+            playMIDINote(1, 59, 127);//C3
+            playMIDINote(1, 62, 127);//Eb3
         }
 if (kpd.key[i].kchar == 'x') {
-            Serial.println("number x pressed");
+            playMIDINote(2, 42, 127);//F#2
         }
 if (kpd.key[i].kchar == 'y') {
-            Serial.println("number y pressed");
+            playMIDINote(1, 49, 127);//C3
+            playMIDINote(1, 54, 127);//F3
+            playMIDINote(1, 58, 127);//A3
         }
 if (kpd.key[i].kchar == 'z') {
-            Serial.println("number z pressed");
+            playMIDINote(1, 49, 127);//C3
+            playMIDINote(1, 54, 127);//F3
+            playMIDINote(1, 57, 127);//Ab3
         }
+
                       break;
                     case RELEASED:
 if (kpd.key[i].kchar == '0') {
